@@ -1,0 +1,56 @@
+@import "./helpers/style-common.scss";
+@import "./helpers/style-helper.scss";
+
+body {
+  background-color: $backgroundMain;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    & > div {
+      ul {
+        list-style: none;
+        display: flex;
+        li {
+          padding: 20px;
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  section#main {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    & > div:first-child {
+      width: 60%;
+      h1 {
+        font-size: 120px;
+        background: -webkit-linear-gradient(#e832d0, #008de9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        margin-bottom: 120px;
+      }
+      button {
+        font-size: 32px;
+      }
+    }
+    & > div:last-child {
+      align-self: flex-end;
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

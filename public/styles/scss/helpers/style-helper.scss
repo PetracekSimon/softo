@@ -1,0 +1,11 @@
+$backgroundMain: #1E1E1E;
+$backgroundSecondary: #00b11d;
+@mixin mq($width, $type: max) {
+  @if $type==max {
+    $width: $width - 1px;
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
