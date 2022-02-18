@@ -1,4 +1,4 @@
-$backgroundMain: #1E1E1E;
+$backgroundMain: #1e1e1e;
 $backgroundSecondary: #00b11d;
 @mixin mq($width, $type: max) {
   @if $type==max {
@@ -8,4 +8,15 @@ $backgroundSecondary: #00b11d;
   @media only screen and (#{$type}-width: $width) {
     @content;
   }
+}
+@mixin softoBtn($color: #e800c8) {
+  background-color: $color;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  box-shadow: 0 0 10px $color, 0 0 10px $color, 0 0 10px $color;
+  text-transform: uppercase;
+  cursor: pointer;
 }
